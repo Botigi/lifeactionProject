@@ -1,266 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-<script src="EventsJava.js"></script>
-<link rel = "stylesheet" type = "text/css" href = "EventsCSS.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Brandon Joyce</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/subpage.css">
+    <script src="../script/events.js"></script>
+    <style>
+        .buttonImage {
+            cursor: pointer;
+            margin: 5px;
+        }
+        .buttonContents {
+            margin-top: 1rem;
+            font-family: courier;
+        }
+    </style>
 </head>
 
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">Brandon Joyce</a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="howard.html">Howard Kleger</a></li>
+                    <li><a href="appearances.html">Press</a></li>
+                    <li><a href="events.html" class="active">Events</a></li>
+                    <li><a href="photoalbum.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Events</h1>
+
+        <div class="events-schedule">
+            <h2>Our Daily Schedule:</h2>
+            <ul>
+                <li><b>1:00 PM</b> - Arise.</li>
+                <li><b>2:00 PM</b> - The Trivium.</li>
+                <li><b>4:00 PM</b> - Lunch/Dialectic</li>
+                <li><b>6:00 PM</b> - The Quadrivium (minus astronomy)</li>
+                <li><b>7:00 PM</b> - We dine. More dialectic.</li>
+                <li><b>9:00 PM</b> - Two hours for the body, to either tone or strengthen. Oils and tinctures followed by merciless agon. More oils and tinctures.</li>
+                <li><b>11:00 PM</b> - Astronomy.</li>
+                <li><b>12:00 PM</b> - Cartoons</li>
+                <li><b>1:00 AM</b> - Until dawn - Speculation.</li>
+            </ul>
+        </div>
+
+        <p style="margin-top: 2rem; font-size: 1.05rem; line-height: 1.8; background: linear-gradient(135deg, #f5f7fa 0%, #f0f4f8 100%); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+            Come to our <strong>Survey of Western Philosophy 101</strong> Intro Super Short Course. (Check local listings)<br><br>
+            Or: Contact the <strong>Philosophy Department and Mathsquad</strong> at the South Philadelphia Athenaeum.<br><br>
+            <em>Bad ideas, experiments, high actions: always welcome.</em><br>
+            <em>Anything in the medium of experience.</em>
+        </p>
+
+        
+        <h2 style="margin-top: 2rem; text-align: center; background: linear-gradient(135deg, #0044cc 0%, #0033aa 100%); color: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+            EVENTS at: THE SOUTH PHILADELPHIA ATHENAEUM!!
+        </h2>
+
+        <div style="text-align: center; margin: 2rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-top: 0; color: var(--color-accent);">Select a Month:</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                <img src="october.png" onclick="octoberDisplay()" class="buttonImage" alt="October">
+                <img src="september.png" onclick="septemberDisplay()" class="buttonImage" alt="September">
+                <img src="august.png" onclick="augustDisplay()" class="buttonImage" alt="August">
+                <img src="july.png" onclick="julyDisplay()" class="buttonImage" alt="July">
+                <img src="june.png" onclick="juneDisplay()" class="buttonImage" alt="June">
+                <img src="may.png" onclick="mayDisplay()" class="buttonImage" alt="May">
+                <img src="april.png" onclick="aprilDisplay()" class="buttonImage" alt="April">
+                <img src="march.png" onclick="marchDisplay()" class="buttonImage" alt="March">
+                <img src="february.png" onclick="februaryDisplay()" class="buttonImage" alt="February">
+                <img src="december.png" onclick="decemberDisplay()" class="buttonImage" alt="December">
+                <img src="november.png" onclick="novemberDisplay()" class="buttonImage" alt="November">
+            </div>
+        </div>
+
+        <div id="october" class="buttonContents" style="display:none">
+        </div>
+
+        <div id="september" class="buttonContents" style="display: none;">
+        </div>
+
+        <div id="august" class="buttonContents" style="display: none;">
+        </div>
+
+        <div id="july" class="buttonContents" style="display: none;">
+        </div>
+
+        <div id="june" class="buttonContents" style="display: none;">
+        </div>
+
+        <div id="may" class="buttonContents" style="display: none;">
+        </div>
+
+        <div id="april" class="buttonContents" style="display: none;">
+        </div>
+
+        <div id="march" class="buttonContents" style="display: none;">
+        </div>
+
+        <div id="february" class="buttonContents" style="display: none;">
+        </div>
+
+        <div id="december" class="buttonContents" style="display: none;">
+        </div>
+
+        <div id="november" class="buttonContents" style="display: none;">
+        </div>
+
+        <div style="margin-top: 2rem; text-align: center; padding: 1rem;">
+            <a href="http://www.flickr.com/photos/richarddavis/" style="display: inline-block; padding: 0.75rem 1.5rem; background: var(--color-accent); color: white; border-radius: 6px; font-weight: 500; transition: background 0.2s ease;">📷 Photos by Dick Davis</a>
+        </div>
+
+        <div style="margin-top: 3rem; background: linear-gradient(135deg, #f5f7fa 0%, #f0f4f8 100%); padding: 2rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+            <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
+                <strong>We are currently reassembling in North Philadelphia, just South of Temple.</strong><br><br>
+                Those interested in studios or who would like to join our email list should write to:<br>
+                <strong style="color: var(--color-accent);">brandonjoyce@hotmail.com</strong>
+            </p>
+        </div>
+
+        <div style="margin-top: 2rem; background: white; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--color-border); box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <h3 style="color: var(--color-accent); margin-top: 0;">Philadelphia Destroys the SPA</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 0.5rem 0;"><a href="http://www.lifeactionrevival.org/tossed1.html" style="font-weight: 500;">→ Part One</a></li>
+                <li style="padding: 0.5rem 0;"><a href="http://www.lifeactionrevival.org/tossed2.html" style="font-weight: 500;">→ Part Two</a></li>
+            </ul>
+        </div>
+
+        <br>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Brandon Joyce / Life Action Revival. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/brandonjoyce" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://facebook.com/brandonjoyce" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://x.com/brandonjoyce" target="_blank" rel="noopener">X</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/contact.js"></script>
+
+</body>
 
-<BODY background="blue.gif">
-<div class = "top">
-<center><Table style = "font-size: 100px; font-family: courier ; border:10px solid black; width: 100%;" ><tr><td><center>Events</center></td></tr></table></center>
-</div>
-<font face="courier">
-
-
-<br>
-<br>
-
-<center><table>
-<div class = "left">
-<table style = "border:3px solid black;">
-<tr><td>
-<center><h1>Our Daily Schedule:</h1><h2>
-<b>1:00 PM</b>- Arise.<br>
-<b>2:00 PM</b>-The Trivium.<br>
-<b>4:00 PM</b>- Lunch/Dialectic<br>
-<b>6:00 PM</b>- The Quadrivium (minus astronomy)<br>
-<b>7:00 PM</b>- we dine. More dialectic.<br>
-<b>9:00 PM</b>Two hours for the body, to either tone or 
-strengthen. Oils and tinctures followed by<br>
-merciless agon. More oils and tinctures.<br>
-<b>11:00 PM</b>- Astronomy.<br>
-<b>12:00 PM</b>- Cartoons<br>
-<b>1:00 AM</b>-until dawn- Speculation.
-</h2></center>
-</table>
-</center>
-<br>
-<br>
-
-
-
-
-
-
-
-
-<tr><td>
-<center><font font face="courier">
-<b>Come to our Survey of Western Philosophy 101 Intro Super Short Course.
-(check local listings)<p>
-Or: Contact the Philosophy Department and Mathsquad
-      at the So. Phila Athen�um. <p>
-Bad ideas, experiments, high actions: always welcome.<p>
-...Anything in the medium of experience.<p> </b></p>
-</center>
-</td></tr>
-
-
-
-
-<table>
-<tr><td>
-Philadelphia Destroys the SPA<br>
-<a href="http://www.lifeactionrevival.org/tossed1.html"> Part One</a><br>
-<a href="http://www.lifeactionrevival.org/tossed2.html">Part Two </a></td></tr>
- </table>
-</div>
-
-
-<div class = "right">
-</center>
-</td><td cellpadding="20" cellspacing="20" bgcolor="White">
-<font size="+2" font face="courier" font color="Black"> <b style="color:black;background-color:#a0ffff">
-<center><b>EVENTS at: THE SOUTH PHILADELPHIA ATHEN&AElig;UM!!</b>
-<br><font size="+2">
-<b>&#934;&#953;&#955;&#945;&#948;&#949;&#955;&#966;&#953;&#945; 
-&#913;&#952;&#951;&#957;&#953;&#969;&#957;<br><br></center></b>
-</font>
-
-
-<Table bgcolor="White"><tr><td>
-<font size="-1" font face="arial" font color="Black">
-
-<center>
-<img src = "october.png" onclick="octoberDisplay()" class = "buttonImage">
-<img src = "september.png" onclick="septemberDisplay()" class = "buttonImage">
-<img src = "august.png" onclick="augustDisplay()" class = "buttonImage">
-<img src = "july.png" onclick="julyDisplay()" class = "buttonImage" class = "months">
-<img src = "june.png" onclick="juneDisplay()" class = "buttonImage">
-<img src = "may.png" onclick="mayDisplay()" class = "buttonImage">
-<img src = "april.png" onclick="aprilDisplay()" class = "buttonImage">
-<img src = "march.png" onclick="marchDisplay()" class = "buttonImage">
-<img src = "february.png" onclick="februaryDisplay()" class = "buttonImage">
-<img src = "december.png" onclick="decemberDisplay()" class = "buttonImage">
-<img src = "november.png" onclick="novemberDisplay()" class = "buttonImage">
-</center>
-<table> <td><tr>
-
-
- <div id = "october" class = "buttonContents" style = "display:none">
- <center><h2>October</h2>
-27th: Usaisamonster. Kites. More. (Moved)<br><br>
-</center></div>
-<tr>
-
-
-
-
-
-<div id = "september" class = "buttonContents" style = "display: none;">
-<center><h2>September</h2>
-23rd: South Philadelphia Athen�um will be raided and locked out by Police and L&I. Free!!!<br><br>
-15th: Magik Markers. Sunburned Hand of the Man.<br><br>
-11th: Breathmint Birthday. 10 bands.<br><br>
-9th: Scarekrau Radio. Fat Worm of Error. Temple of Bon Matin. M Ax Noi Mach.<br><br>
-8th: Late Nite Prayers. Fang Island. Canape.<br><br>
-1st: Aa. Awesome Colors. Red Wizard (maybe).<br><br>
-</center></div>
-
-
-
-<div id = "august" style = "display: none;"  class = "buttonContents">
-<center><h2>August</h2>
-30th: Burmese. Hospitals. O Death<br><br>
-27th: Big Art Show.<br><br>
-25th: Horse Sinister. Jesse Kudler.<br><br>
-18th: Heart2Heart. Sharks with Wings. Canape. Stairway to Freebird.<br><br>
-11th: Metalux. Na. Slow Jams. Rose for Bodhan. Captain Ahab.<br><br>
-10th: 8PM Mathsquad: Intro to Probability Theory. <br><br>
-5th: Amps for Christ. Parts&Labor, Business Lady. Drummond the Magician.<br><br>
-3rd: 8PM Mathsquad: Discrete Mathematics, Counting.<br> <br>
-2nd: Witchhunt. The Human Adults. Magnet City Kids. Killtime.<br><br>
-</center></div>
-
-
-
-
-<div id = "july" style = "display: none;"  class = "buttonContents">
-<center><h2>July</h2>
-July 31st: Double Leopards. Skaters. Newton. Unchained.<br><br>
-July 29th: Lecture by Lex Kravitz: Neuroscience and Why You Are Always Out of Beer and Cigarettes. 8 or 9PM	<br><br>
-July 25th: Set Theory Intro, with Matt Maecock.<br><br>
-July 23rd: Nautical Almanac. Fight Amputation. Gunna Vahm. Gabe Boyer.<br><br>
-July16th: Men Who Can't Love. M AX NOI MACH. Drums Like Machine Guns. Mince Meat or Ten Speed.<br><br>
-July 14th: Racoo-oo-oon. With Psych Experiments.<br><br>
-July 8th: S.T.R.E.E.T.S. McRad. Sweatheart. And More Fun.<br><br>
-</center></div>
-
-
-
-
-<div id = "june" style = "display: none;"  class = "buttonContents">
-<center><h2>June</h2>
-June 30th: Kaufman and <i>Riot</i>.<br><br>
-June 18th: Lost Film Fest. Shorts and Hijinx. 10PM.<br><br>
-June 17th: On Andy Kaufman 8PM.<br><br>
-June 13th: White Mice. The Coughs. Attitude Problem. Laugh Track.<br><br>
-June 10th: Powerlunch. PAK. Wolf Vs.<br><br>
-June 8th: Philosophy, Eightish, on Hyperreality. <br><br>
-June 7th: Ultradolphins. Mother Mime. Order of the Dying Orchid. Eat Forever.<br><br>
-June 1st: Animal Hospital. Jacob Anodide. Heuristic.<br><br>
-</center></div>
-
-
-
-
-
-<div id = "may" style = "display: none;"  class = "buttonContents">
-<center><h2>May</h2>
-May 29th: SummerJamBand. 13 Knots. French In Action.<br><br>
-May 27th: S.A.R.S. (Serious. About. Rollerblading...Seriously.)
-Brandon Joyce, Corndawg, and Jay Purdy rollerblade from Philadelphia to New York, in two days.<br><br>
-May 23rd:Lightning Bolt. Mastermynd. Horse Spirit Penetrates. Angeldust. Deerhunter. Attitude Problem.<br><br>
-May 13th: Air Guitar Magazine. Goblin City. Black Ass. Jaded Scenester with White Belt.<br><br>
-May 6th: White Mice and More!!!<br>
-Also: Paperrad Opening at Space 1026. Go!<br><br>
-May 1st: South Philadelphia Olympics <br><br>
-(teams of 4 or 5 email thekarmamechanic@hotmail.com)<br><br>
-<center></div>
-
-
-
-
-<div id = "april" style = "display: none;"  class = "buttonContents">
-<center><h2>April</h2>
-April 27th: Open Philosophy, around Ninish.<br><br>
-April 26th: Free Movie Screening: Turkish Star Wars, and More.<br><br>
-April 21st: Gang Wizard. Unchained.<br><br>
-April 16th The Body. Mahi Mahi. Drums Like Machine Guns.<br><br>
-April 13th: Like Language. Ten Ton. Gored By Buffalo.<br><br>
-April 1st: Our 2nd First Friday: GAME SHOW NIGHT!!! Time to Amazing!<br><br>
-</center></div>
-<br>
-
-
-
-<div id = "march" style = "display: none;"  class = "buttonContents">
-<center><h2>March</h2>
-March 21st. Mildew. Steve Dracula. R.L. Stein.<br><br>
-March 17th: Lucas Abela. Dave Phillips. Air Conditioning. Sara Galaxia. Right-Arm-Severed.<br><br>
-March 15th: Hair Police. Dead Machines. Wooden Wands. <br><br>
-March 7th: BIG DAY: Memorial Service held for Eli Winograd, starting at 6PM. Then, Extraordinaires, Buzzard, and Eat Forever.<br><br>
-March 5th: Emil Beaulieau. Karlheinz. Sickness. Rad attack.<br><br>
-</center></div>
-
-
-
-<div id = "february" style = "display: none;"  class = "buttonContents">
-<center><h2>February</h2>
-February 6th: Superbowl Halftime Extravaganza, mc'ed by Jay Plus. <br><br>
-February 4th: Our First First Friday: Kites, Greyskull, M Ax Noi Mach, Dreamhouse,and Brandon Joyce-- as well as fashion greats by Crystal Stoko. and Heather Clark. <br><br>
-</center></div>
-
-
-
-
-<div id = "december" style = "display: none;"  class = "buttonContents">
-<center><h2>December</h2>
-December 30th: Projexorcism. Temple of Bon Matin. Drums Like Machine Guns. <br><br>
-December 16th: Halloween Extravaganza. Haunted Houses. Costumes. Plus music with Parts-and-Labor and Pterodactyl.<br><br>
-December 3rd: Magnet City Kids. Fourway milkshake. Bumpin Uglies.<br><br>
-</center></div>
-
-
-
-
-<div id = "november" style = "display: none;"  class = "buttonContents">
-<center><h2>November</h2>
-November 19th: Japanese cosmiccomic Peelander-Z. Playing with Red Mufunda and others.<br><br>
-November 15th: Koonda Holaa (Czech Rep.), Buddyship (Providence), Openminded Men.<br><br>
-November 13th: A Brash Fashion Lineup. Animental. Lucy Goosie on Accordeon.<br><br>
-</center></div>
-
-<br>
-<br>
-</td></tr></table>            
-</td></tr><br>
-</div>
-</div>
-
-<table><tr>
-<tr><td>
-<font face="courier">
-</td></tr>
-<tr><td>
-<a href="http://www.flickr.com/photos/richarddavis/"> And from Dick Davis</a>
-</td></tr>
-</td></tr>
-</table>
-
-
-
-<table>
-<tr><td>
-<font face="courier" font color="Black">
-<h3>We are currently reassembling in North Philadelphia, just South of Temple. Those interested
-in studios or who would like to join my email list should write me at the address <b>brandonjoyce@hotmail.com</b>
-</td></tr>
-</table>
-
-</BODY>
 </html>
 
 

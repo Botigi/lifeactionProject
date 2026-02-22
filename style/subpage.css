@@ -104,6 +104,76 @@ textarea { min-height: 140px; resize: vertical; }
 .forget { position: absolute; top: 70px; left: 570px; }
 .soda { position: absolute; top: 80px; left: 280px; }
 
+/* Events page styles */
+.events-schedule {
+    background: linear-gradient(135deg, #f5f7fa 0%, #f0f4f8 100%);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-accent);
+}
+
+.events-schedule h2 {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.events-schedule ul {
+    list-style: none;
+    padding: 0;
+}
+
+.events-schedule li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    line-height: 1.6;
+}
+
+.events-schedule li:last-child {
+    border-bottom: none;
+}
+
+.buttonImage {
+    cursor: pointer;
+    margin: 8px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    border-radius: 4px;
+    max-width: 80px;
+    height: auto;
+}
+
+.buttonImage:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.buttonContents {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    margin-top: 2rem;
+    animation: slideDown 0.3s ease;
+}
+
+.buttonContents h2 {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.5rem;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Schematics small styles (from schema.html) */
 body.schematics { font-family: Georgia, serif; }
 nav.small ul { list-style-type: none; padding: 0; }

@@ -29,12 +29,19 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: var(--font-main);
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 img {
@@ -111,6 +118,11 @@ nav a {
 
 nav a:hover, nav a.active {
     color: var(--color-accent);
+}
+
+/* Main Content */
+main {
+    flex: 1;
 }
 
 /* Hero Section */
