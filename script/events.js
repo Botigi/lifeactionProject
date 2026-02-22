@@ -105,6 +105,15 @@ function toggleMonth(monthId) {
   if (event && event.target) {
     event.target.classList.add('active');
   }
+
+  // Scroll down so the month selector and the beginning of the list are visible
+  const monthSelector = document.querySelector('.month-selector');
+  if (monthSelector) {
+    const headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 80;
+    const offset = headerHeight + 20;
+    const top = monthSelector.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  }
 }
 
 // Add CSS for event items

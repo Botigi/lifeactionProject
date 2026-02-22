@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) 320px;
     gap: 2.5rem;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 2rem auto;
     padding: 0 2rem;
     width: 100%;
@@ -169,6 +169,30 @@
 
 .widget_text p {
     margin: 0.5rem 0;
+}
+
+/* Wide screens: sidebar doubles into 2 columns */
+@media (min-width: 1400px) {
+    .blog-layout {
+        grid-template-columns: minmax(0, 1fr) 600px;
+    }
+
+    #secondaryContent {
+        position: sticky;
+        top: calc(var(--header-height) + 1rem);
+    }
+
+    #secondaryContent > ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    #secondaryContent .widget {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 }
 
 /* Responsive Design */
