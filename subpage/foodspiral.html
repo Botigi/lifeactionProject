@@ -12,11 +12,13 @@
         /* Food Spiral Blog Style */
         .blog-layout {
             display: grid;
-            grid-template-columns: 1fr 320px;
+            grid-template-columns: minmax(0, 1fr) 320px;
             gap: 2.5rem;
             max-width: 1200px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 2rem;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         #primaryContent {
@@ -24,6 +26,7 @@
             padding: 2.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            min-width: 0;
         }
         
         #posts {
@@ -179,27 +182,85 @@
             margin: 0.5rem 0;
         }
         
-        @media (max-width: 968px) {
+        /* Responsive Design */
+        @media (max-width: 1024px) {
             .blog-layout {
-                grid-template-columns: 1fr;
+                gap: 2rem;
+                grid-template-columns: minmax(0, 1fr) 280px;
+                padding: 0 1.5rem;
             }
             
-            #secondaryContent {
-                position: static;
+            #primaryContent {
+                padding: 2rem;
             }
         }
         
         @media (max-width: 768px) {
-            .postTitle {
-                font-size: 1.7rem;
+            .blog-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin: 1.5rem auto;
+                padding: 0 1rem;
+            }
+            
+            #secondaryContent {
+                position: static !important;
+                background: white;
+                padding: 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                order: 2;
             }
             
             #primaryContent {
                 padding: 1.5rem;
+                order: 1;
             }
             
+            .postTitle {
+                font-size: 1.7rem;
+            }
+            
+            .postWrapper {
+                margin-bottom: 2.5rem;
+                padding-bottom: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
             .blog-layout {
                 margin: 1rem auto;
+                padding: 0 0.75rem;
+                gap: 1.5rem;
+            }
+            
+            #primaryContent,
+            #secondaryContent {
+                padding: 1rem;
+                border-radius: 6px;
+            }
+            
+            .postTitle {
+                font-size: 1.4rem;
+                margin-bottom: 0.75rem;
+            }
+            
+            .post {
+                font-size: 1rem;
+            }
+            
+            .postWrapper {
+                margin-bottom: 2rem;
+                padding-bottom: 1.5rem;
+            }
+            
+            #secondaryContent .widget {
+                margin-bottom: 1.5rem;
+                padding-bottom: 1rem;
+            }
+            
+            #secondaryContent .widget-title {
+                font-size: 1rem;
             }
         }
     </style>
@@ -218,11 +279,19 @@
                     <li><a href="appearances.html">Press</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="photoalbum.html">Gallery</a></li>
+                    <li><a href="foodspiral.html" class="active">Food Spiral</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Food Spiral</h1>
+            <p>A food blog for the rest of us. Explorations in culinary transcendence, radical reviews, and the search for gastronomic enlightenment beyond the boundaries of conventional taste.</p>
+        </div>
+    </section>
 
     <div class="blog-layout">
         <div id="primaryContent">
