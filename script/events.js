@@ -90,11 +90,20 @@ function toggleMonth(monthId) {
   allMonths.forEach(month => {
     month.style.display = 'none';
   });
-  
+
+  // Remove active class from all buttons
+  const allBtns = document.querySelectorAll('.month-btn');
+  allBtns.forEach(btn => btn.classList.remove('active'));
+
   // Show selected month
   const selectedMonth = document.getElementById(monthId);
   if (selectedMonth) {
     selectedMonth.style.display = 'block';
+  }
+
+  // Add active class to clicked button
+  if (event && event.target) {
+    event.target.classList.add('active');
   }
 }
 
