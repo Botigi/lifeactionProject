@@ -555,3 +555,53 @@ nav.small ul li { display: inline; margin-right: 10px; }
         border-radius: 6px;
     }
 }
+
+.linksimages{
+    display:inline-flex;
+}
+
+.linksimages div{
+    margin:15px;
+    float:center;
+}
+
+.links{
+    display:inline-flex;
+    
+}
+
+.links div{
+    border-style:solid;
+    border-color: #000;
+    border-width: 1px;
+    
+    width: 255px;
+    height: 220px;
+    padding: 15px;
+    display:block
+   
+
+}
+
+.links div a{
+    display:block;
+}
+
+.links1 {
+    float:left;
+    margin-right:5px;
+}
+.links2 {
+    float:center;
+    margin-right:5px;
+}
+.links3{
+    float:center;
+   margin-right:5px;
+}
+.links4{
+    float:right;
+    
+    
+   
+}
