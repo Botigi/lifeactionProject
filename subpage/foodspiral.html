@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Spiral | Brandon Joyce</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/subpage.css">
+    <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin" rel="stylesheet" type="text/css">
+    <style>
+        /* Food Spiral Blog Style */
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        #primaryContent {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        #posts {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .postWrapper {
+            margin-bottom: 3.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .postWrapper:last-child {
+            border-bottom: none;
+        }
+        
+        .postTitle {
+            font-family: 'Lobster', cursive;
+            font-size: 2.2rem;
+            margin: 0 0 0.5rem 0;
+            line-height: 1.3;
+        }
+        
+        .postTitle a {
+            color: var(--color-text);
+            text-decoration: none;
+        }
+        
+        .postTitle a:hover {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+        
+        .date {
+            color: var(--color-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .post {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        
+        .post p {
+            margin-bottom: 1rem;
+        }
+        
+        .post img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+        }
+        
+        .post iframe {
+            max-width: 100%;
+            display: block;
+            margin: 1rem 0;
+        }
+        
+        .more-link {
+            color: var(--color-accent);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .more-link:hover {
+            text-decoration: underline;
+        }
+        
+        .postMeta {
+            color: var(--color-muted);
+            font-size: 0.85rem;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .postMeta a {
+            color: var(--color-accent);
+        }
+        
+        #secondaryContent {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            height: fit-content;
+            position: sticky;
+            top: calc(var(--header-height) + 1rem);
+        }
+        
+        #secondaryContent ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #secondaryContent .widget {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        #secondaryContent .widget:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        #secondaryContent .widget > strong,
+        #secondaryContent .widget-title {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: block;
+            color: var(--color-text);
+        }
+        
+        #secondaryContent .widget > ul {
+            margin-top: 0.5rem;
+        }
+        
+        #secondaryContent .widget li {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+        
+        #secondaryContent .widget a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        #secondaryContent .widget a:hover {
+            color: var(--color-accent);
+            text-decoration: underline;
+        }
+        
+        #secondaryContent img {
+            max-width: 100%;
+            height: auto;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .widget_text p {
+            margin: 0.5rem 0;
+        }
+        
+        @media (max-width: 968px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            #secondaryContent {
+                position: static;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .postTitle {
+                font-size: 1.7rem;
+            }
+            
+            #primaryContent {
+                padding: 1.5rem;
+            }
+            
+            .blog-layout {
+                margin: 1rem auto;
+            }
+        }
+    </style>
+    <script src="../script/contact.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">Brandon Joyce</a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="howard.html">Howard Kleger</a></li>
+                    <li><a href="appearances.html">Press</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="photoalbum.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-layout">
+        <div id="primaryContent">
+            <ol id="posts">
+                
+                <li class="postWrapper">
+                    <h2 class="postTitle"><a href="foodspiral/homeslice-vitamin-water.html" rel="bookmark">HOMESLICE. Episode 1: How to Make Vitamin Water®</a></h2>
+                    <p class="date"><small>February 14, 2013 by Brandon Joyce</small></p>
+                    <div class="post">
+                        <p><iframe src="https://player.vimeo.com/video/58233467" width="100%" height="315" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></p>
+                    </div>
+                    <p class="postMeta">Category Uncategorized | Tags: | No Comments</p>
+                </li>
+
+                <li class="postWrapper">
+                    <h2 class="postTitle"><a href="foodspiral/ayahuasca.html" rel="bookmark">Our Vegetables Segment, on Αyahuasca.</a></h2>
+                    <p class="date"><small>January 14, 2012 by Brandon Joyce</small></p>
+                    <div class="post">
+                        <p style="text-align: right;"><em>"No, that's all you."</em></p>
+                        <p>This week, we'll be reviewing <em>ayahuasca</em>, the intense and emetic Amazonian hallucinogen long used among various South American communities, in their shamanic practices.</p>
+                        <p>Αyahuasca was relatively unknown outside of these communities until the publications of freak/Harvard ethnobotanist Richard Evans Schultes. It was the Schultes lore that lured William Burroughs into the jungle, hoping to cure his opiate addiction, only to be greatly humbled by the encounter. He wrote about this— his "final fix"— in the epistolary <em>Yage Letters,</em> which make as good a brochure as any.</p>
+                        <p><a href="#" class="more-link">(more…)</a></p>
+                    </div>
+                    <p class="postMeta">Category Ambiguities, Breakthroughs, Deaths, Recipes, Reviews | Tags: ayahuasca, digital aftertaste, resipiscence, richard evans schultes, william burroughs, yage | No Comments</p>
+                </li>
+
+                <li class="postWrapper">
+                    <h2 class="postTitle"><a href="foodspiral/iceland-foods.html" rel="bookmark">Guest Bloggeur Jerry P. Orridge on UK's Iceland Foods Ltd.</a></h2>
+                    <p class="date"><small>January 14, 2012 by Guest Blogger</small></p>
+                    <div class="post">
+                        <p><img class="aligncenter" title="iceland singers" src="../images/foodspiral/iceland-singers.jpg" alt="iceland singers" width="325" height="211"></p>
+                        <p><a href="foodspiral/iceland-foods.html" class="more-link">(more…)</a></p>
+                    </div>
+                    <p class="postMeta">Category Reviews | Tags: angel delight, candy, hackney, ice dream, iceland food ltd, impress swirl, jerry p. orridge, keira knightley, kelly clarkson, near death, Toffee Caramel Fantastica | No Comments</p>
+                </li>
+
+                <li class="postWrapper">
+                    <h2 class="postTitle"><a href="foodspiral/ubliquity.html" rel="bookmark">Ubliquity™</a></h2>
+                    <p class="date"><small>December 23, 2011 by Brandon Joyce</small></p>
+                    <div class="post">
+                        <p>&#xFEFF;</p>
+                        <p style="text-align: center;"><img class="aligncenter" title="blicksoldlogo" src="../images/foodspiral/blicksoldlogo.jpg" alt="blick's logo" width="282" height="112"></p>
+                        <p><a href="foodspiral/ubliquity.html" class="more-link">(more…)</a></p>
+                    </div>
+                    <p class="postMeta">Category Uncategorized | Tags: blick strips, Blick's, decor, encrypted advertisements, Funnyface, progress, secret worlds, soda fiends, surprise guys | 1 Comment</p>
+                </li>
+
+                <li class="postWrapper">
+                    <h2 class="postTitle"><a href="foodspiral/99-cent-store.html" rel="bookmark">From Necessity to Liberty: the 99¢ Only Store.</a></h2>
+                    <p class="date"><small>December 20, 2011 by Brandon Joyce</small></p>
+                    <div class="post">
+                        <p style="text-align: center;"> </p>
+                        <p style="text-align: center;"><img class="aligncenter" title="99cent1" src="../images/foodspiral/99cent1.jpg" alt="99 cent store" width="422" height="316"></p>
+                        <p><a href="foodspiral/99-cent-store.html" class="more-link">(more…)</a></p>
+                    </div>
+                    <p class="postMeta">Category Reviews, Uncategorized | Tags: 99¢ Only Store, fedora-harshing, handcuffs, heartbreak, liberty, Los Angeles, picture perfection, teeth and mortality, tooth tunes | 2 Comments</p>
+                </li>
+
+                <li class="postWrapper">
+                    <h2 class="postTitle"><a href="foodspiral/blicks-eating-establishment.html" rel="bookmark">Blick's: A brief esquisse of my ideal eating establishment</a></h2>
+                    <p class="date"><small>November 19, 2011 by Brandon Joyce</small></p>
+                    <div class="post">
+                        <p style="text-align: center;"><img class="aligncenter" title="Blick's" src="../images/foodspiral/blicks.jpg" alt="Blick's" width="378" height="210"></p>
+                        <p><a href="foodspiral/blicks-eating-establishment.html" class="more-link">(more…)</a></p>
+                    </div>
+                    <p class="postMeta">Category Uncategorized | Tags: Bakhtin, Birthday Sauce, Blick's, confused architecture, food geometry, food-dispensers, hylomorphic cuisine, molybdenum, overcoming challenges, slippery slopes, Soda Control Panel, total automation, utopian fast food, visionary | 1 Comment</p>
+                </li>
+
+                <li class="postWrapper">
+                    <h2 class="postTitle"><a href="foodspiral/rumba-energy-drink.html" rel="bookmark">Taurine Dreams: On Rumba, the overly-orange energy elixir.</a></h2>
+                    <p class="date"><small>November 14, 2011 by Brandon Joyce</small></p>
+                    <div class="post">
+                        <p><img class="aligncenter" title="rumba" src="../images/foodspiral/rumba.jpg" alt="rumba" width="300" height="153"></p>
+                        <p>It's fitting that the first review on <em>Food Spiral</em> would be an energy beverage. Where better than the <em>Food Spiral</em> to transgress the boundaries between Food and Drug? Or, to explore the difference between mere nutrition and true ecstasis? Aren't we blessed to live in a world where we can purchase a magical elixir for two dollars, drink it with friends in the grit behind a shopping center, by a loading dock and a buzzing highway, and spend the rest of the afternoon wrestling cardboard boxes? Equally, we can read a Great Work, follow it with a canister of radioactive energy fluid, and find ourselves still awake and frothing thirty hours later, on a grassy patch somewhere near our house, in the grips of an Absolute.</p>
+                        <p><a href="foodspiral/rumba-energy-drink.html" class="more-link">(more…)</a></p>
+                    </div>
+                    <p class="postMeta">Category Breakthroughs, Reviews | Tags: apophany, big lots, caffeine justice, energy beverages, red devil, rumba, seven eleven, the absolute, what are you waiting for?, wild stallion, xanthines | 1 Comment</p>
+                </li>
+
+                <li class="postWrapper">
+                    <h2 class="postTitle"><a href="foodspiral/welcome-food-spiral.html" rel="bookmark">Welcome to the Food Spiral Network.</a></h2>
+                    <p class="date"><small>November 6, 2011 by Brandon Joyce</small></p>
+                    <div class="post">
+                        <p>&nbsp;</p>
+                        <p>With all the different bars and fabulous restaurants to be found all over the world, wouldn't it be great if you could put them all in one place and burn them to the ground? <em>Food Spiral </em>is a food blog for <em>the rest of us</em>, or at least a food blog for whoever's left: for the daredevils, the freeze-dried space-food aficionados, the human goats, the bricoleurs, the sturdy, the creepers, the trick-or-treaters, the sidewalk bistro griefers, the soda fiends, the gas station gourmands— for indeed <em>everybody </em>committed to a new Food Transcendence. We know where you live. Taste the Rainbow.</p>
+                        <p><img src="../images/foodspiral/grocerywitch.jpeg" alt="grocery witch" title="grocerywitch" width="420" class="aligncenter"></p>
+                        <p><a title="Kalle Runeson" href="http://www.kalleruneson.com/" target="_blank">Photo: Kalle Runeson</a></p>
+                        <p style="text-align: center;">&nbsp;</p>
+                        <p><iframe width="100%" height="315" src="https://www.youtube.com/embed/oyZ4gstEi-o" frameborder="0" allowfullscreen=""></iframe></p>
+                        <p><em>Food Spiral </em>encourages an exploratory connoisseurship freed of all the annoyances and aristocratic encodings of most culinary discourse. In our weekly reviews, <em>Food Spiral</em> will entice our readers with exciting new products, travesties, recipes, hate mail, hot tips, and recommendations on some of the more <em>interesting</em> purveyors of low-quality food items. By way of an <em>induced hysterics</em>, we hope to also overcome some of our own inconsistencies and limitations, and open up a path that might lead us beyond both fodder and haute cuisine.</p>
+                        <p>&nbsp;</p>
+                        <p><iframe width="100%" height="315" src="https://www.youtube.com/embed/sdRHGXsFwds" frameborder="0" allowfullscreen=""></iframe></p>
+                        <p><img class="aligncenter" title="gak" src="../images/foodspiral/gak.jpg" alt="gak" width="420" height="560"></p>
+                        <p><img class="aligncenter" title="gummy worm" src="../images/foodspiral/gummy-worm.jpg" alt="gummy worm" width="300" height="360"></p>
+                        <p><img class="aligncenter" title="gummy bear" src="../images/foodspiral/gummy-bear.jpg" alt="gummy bear" width="300" height="360"></p>
+                        <p>&nbsp;</p>
+                    </div>
+                    <p class="postMeta">Category Ambiguities, Breakthroughs, Deaths, Items, Recipes, Reviews, Uncategorized | Tags: | No Comments</p>
+                </li>
+
+            </ol>
+        </div>
+
+        <div id="secondaryContent">
+            <ul>
+                <li class="widget widget_links">
+                    <strong class="widget-title">The Grab Bag</strong>
+                    <ul class="xoxo blogroll">
+                        <li><a href="https://www.biglots.com/rewards">Big Lots Buzz Club</a></li>
+                        <li><a href="http://ehealthforum.com/health/drinking-of-semen-t172030.html">Critical dialogue</a></li>
+                        <li><a href="http://www.youtube.com/watch?v=sdRHGXsFwds">Drinking Motor Oil</a></li>
+                        <li><a href="http://news.softpedia.com/news/Eat-Sand-to-Stay-Fit-and-Preserve-Your-Health-37135.shtml">Eat Sand</a></li>
+                        <li><a href="http://www.ediblearrangements.com/">Edible Arrangements</a></li>
+                        <li><a href="http://www.lifeactionrevival.org">Headquarters</a></li>
+                        <li><a href="http://www.vat19.com/dvds/worlds-largest-gummy-bear.cfm">Rasta Gummi</a></li>
+                    </ul>
+                </li>
+
+                <li class="widget widget_archive">
+                    <strong class="widget-title">Archive</strong>
+                    <ul>
+                        <li><a href="#">February 2013</a></li>
+                        <li><a href="#">January 2012</a></li>
+                        <li><a href="#">December 2011</a></li>
+                        <li><a href="#">November 2011</a></li>
+                    </ul>
+                </li>
+
+                <li class="widget widget_recent_entries">
+                    <strong class="widget-title">Recent Food Spirals</strong>
+                    <ul>
+                        <li><a href="foodspiral/homeslice-vitamin-water.html" title="HOMESLICE. Episode 1: How to Make Vitamin Water®">HOMESLICE. Episode 1: How to Make Vitamin Water®</a></li>
+                        <li><a href="foodspiral/ayahuasca.html" title="Our Vegetables Segment, on Αyahuasca.">Our Vegetables Segment, on Αyahuasca.</a></li>
+                        <li><a href="foodspiral/iceland-foods.html" title="Guest Bloggeur Jerry P. Orridge on UK's Iceland Foods Ltd.">Guest Bloggeur Jerry P. Orridge on UK's Iceland Foods Ltd.</a></li>
+                        <li><a href="foodspiral/ubliquity.html" title="Ubliquity™">Ubliquity™</a></li>
+                        <li><a href="foodspiral/99-cent-store.html" title="From Necessity to Liberty: the 99¢ Only Store.">From Necessity to Liberty: the 99¢ Only Store.</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Brandon Joyce / Life Action Revival. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/brandonjoyce" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://facebook.com/brandonjoyce" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://x.com/brandonjoyce" target="_blank" rel="noopener">X</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
