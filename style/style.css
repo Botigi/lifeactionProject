@@ -409,12 +409,58 @@ footer p {
     transition: color 0.2s ease;
 }
 
-.social-links a:hover {
-    color: var(--color-gold-light);
-    text-decoration: none;
+/*linx page*/
+.linksimages{
+    display:inline-flex;
 }
 
-/* ── Mobile ── */
+.linksimages div{
+    margin:15px;
+    float:center;
+}
+
+.links{
+    display:inline-flex;
+    
+}
+
+.links div{
+    border-style:solid;
+    border-color: #000;
+    border-width: 1px;
+    
+    width: 255px;
+    height: 220px;
+    padding: 15px;
+    display:block
+   
+
+}
+
+.links div a{
+    display:block;
+}
+
+.links1 {
+    float:left;
+    margin-right:5px;
+}
+.links2 {
+    float:center;
+    margin-right:5px;
+}
+.links3{
+    float:center;
+   margin-right:5px;
+}
+.links4{
+    float:right;
+    
+    
+   
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
     :root {
         --spacing-lg: 3rem;
