@@ -60,55 +60,36 @@
             EVENTS at: THE SOUTH PHILADELPHIA ATHENAEUM!!
         </h2>
 
-        <div style="text-align: center; margin: 2rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
-            <h3 style="margin-top: 0; color: var(--color-accent);">Select a Month:</h3>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-                <img src="october.png" onclick="octoberDisplay()" class="buttonImage" alt="October">
-                <img src="september.png" onclick="septemberDisplay()" class="buttonImage" alt="September">
-                <img src="august.png" onclick="augustDisplay()" class="buttonImage" alt="August">
-                <img src="july.png" onclick="julyDisplay()" class="buttonImage" alt="July">
-                <img src="june.png" onclick="juneDisplay()" class="buttonImage" alt="June">
-                <img src="may.png" onclick="mayDisplay()" class="buttonImage" alt="May">
-                <img src="april.png" onclick="aprilDisplay()" class="buttonImage" alt="April">
-                <img src="march.png" onclick="marchDisplay()" class="buttonImage" alt="March">
-                <img src="february.png" onclick="februaryDisplay()" class="buttonImage" alt="February">
-                <img src="december.png" onclick="decemberDisplay()" class="buttonImage" alt="December">
-                <img src="november.png" onclick="novemberDisplay()" class="buttonImage" alt="November">
+        <div class="month-selector">
+            <h3>Select a Month</h3>
+            <div class="month-grid">
+                <button onclick="toggleMonth('january')" class="month-btn">JAN</button>
+                <button onclick="toggleMonth('february')" class="month-btn">FEB</button>
+                <button onclick="toggleMonth('march')" class="month-btn">MAR</button>
+                <button onclick="toggleMonth('april')" class="month-btn">APR</button>
+                <button onclick="toggleMonth('may')" class="month-btn">MAY</button>
+                <button onclick="toggleMonth('june')" class="month-btn">JUN</button>
+                <button onclick="toggleMonth('july')" class="month-btn">JUL</button>
+                <button onclick="toggleMonth('august')" class="month-btn">AUG</button>
+                <button onclick="toggleMonth('september')" class="month-btn">SEP</button>
+                <button onclick="toggleMonth('october')" class="month-btn">OCT</button>
+                <button onclick="toggleMonth('november')" class="month-btn">NOV</button>
+                <button onclick="toggleMonth('december')" class="month-btn">DEC</button>
             </div>
         </div>
 
-        <div id="october" class="buttonContents" style="display:none">
-        </div>
-
-        <div id="september" class="buttonContents" style="display: none;">
-        </div>
-
-        <div id="august" class="buttonContents" style="display: none;">
-        </div>
-
-        <div id="july" class="buttonContents" style="display: none;">
-        </div>
-
-        <div id="june" class="buttonContents" style="display: none;">
-        </div>
-
-        <div id="may" class="buttonContents" style="display: none;">
-        </div>
-
-        <div id="april" class="buttonContents" style="display: none;">
-        </div>
-
-        <div id="march" class="buttonContents" style="display: none;">
-        </div>
-
-        <div id="february" class="buttonContents" style="display: none;">
-        </div>
-
-        <div id="december" class="buttonContents" style="display: none;">
-        </div>
-
-        <div id="november" class="buttonContents" style="display: none;">
-        </div>
+        <div id="january" class="buttonContents" style="display:none"></div>
+        <div id="february" class="buttonContents" style="display:none"></div>
+        <div id="march" class="buttonContents" style="display:none"></div>
+        <div id="april" class="buttonContents" style="display:none"></div>
+        <div id="may" class="buttonContents" style="display:none"></div>
+        <div id="june" class="buttonContents" style="display:none"></div>
+        <div id="july" class="buttonContents" style="display:none"></div>
+        <div id="august" class="buttonContents" style="display:none"></div>
+        <div id="september" class="buttonContents" style="display:none"></div>
+        <div id="october" class="buttonContents" style="display:none"></div>
+        <div id="november" class="buttonContents" style="display:none"></div>
+        <div id="december" class="buttonContents" style="display:none"></div>
 
         <div style="margin-top: 2rem; text-align: center; padding: 1rem;">
             <a href="http://www.flickr.com/photos/richarddavis/" style="display: inline-block; padding: 0.75rem 1.5rem; background: var(--color-accent); color: white; border-radius: 6px; font-weight: 500; transition: background 0.2s ease;">📷 Photos by Dick Davis</a>
