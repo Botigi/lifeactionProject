@@ -436,6 +436,14 @@ footer p {
     
 }
 
+.links a{
+    color: var(--color-text);
+}
+
+.links a:hover, a.active {
+    color: var(--color-accent);
+}
+
 .links div{
     border-style:solid;
     border-color: #000;

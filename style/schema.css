@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Linx page – De Vinculis in Genere
+   Dedicated stylesheet for the links / resource directory page
+   ========================================================================== */
+
+.schema{
+   display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+
+}
+
+.zoom{
+   overflow: hidden;
+   border-radius: 10px;
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoom:hover{
+   -ms-transform: scale(1.5);
+   -webkit-transform: scale(1.5); 
+   transform: scale(1.5);   
+   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
