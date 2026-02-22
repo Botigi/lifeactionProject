@@ -23,5 +23,5 @@
    -ms-transform: scale(1.5);
    -webkit-transform: scale(1.5); 
    transform: scale(1.5);   
-   box-shadow: 0 8px 28px rgba(222, 5, 5, 0.12);
+   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
 }
